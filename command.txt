@@ -1,0 +1,3 @@
+Q. What is the difference between git restore filename and git restore --staged filename?
+Ans. git restore: This command is re[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D ""[Dfilename" : This command is restore the given file which i have modify.
+git restore --staged filename[D[D[D[D[D[D[D[D"filename": This command is unstage the file.
