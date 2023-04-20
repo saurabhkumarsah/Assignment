@@ -2,8 +2,7 @@
 
 Nodejs Introduction Session
 
-## Assignment 
+## Assignment Link
 
-https://docs.google.com/document/d/1fsz27ekIG7l_FBSL1mIw-1vXTDNJun3HNrP-EG4oR94/edit
-
+https://drive.google.com/drive/folders/18vvu0xJvveCrsE0qKejYKe_KImQwtmC9?usp=sharing
 
