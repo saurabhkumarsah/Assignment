@@ -10,5 +10,3 @@ https://docs.google.com/document/d/1bivlpkgtsJfsudBDcXDNHboGjyuAGA6KgzxJKwJSQwI/
 ### Debugger overview
 ### Path Parameters
 ### Query Parameters
-
-
