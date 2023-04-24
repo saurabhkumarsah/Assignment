@@ -1,18 +1,27 @@
-function printDate() {
-    let d = new Date();
-    console.log(`Date: ${d.getDay()}/${d.getMonth()}/${d.getFullYear()}`);
+function findMissingNumber(array) {
+    let n = array[array.length-1];
+    let totalSum = (n*(n+1))/2;
+    let arraySum = array.reduce((a,b)=>(a+b));
+    let num = totalSum - arraySum;
+    return num;
+}
+function findMissingNumber2(array) {
+    // Sum of all numbers from 1 to last element of array
+    let n = array[array.length-1];
+    let totalSum = (n*(n+1))/2;
+
+    // Sum of all numbers from 1 to first element of array
+    let N = array[0];
+    let sumFirst = (N*(N-1))/2
+
+    let arraySum = array.reduce((a,b)=>(a+b));
+    
+    // Sum with missing number
+    let sumWithMissNum = totalSum - sumFirst;
+
+    let missingNumber = sumWithMissNum - arraySum;
+    return missingNumber;
 }
 
-function printMonth() {
-    const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    const d = new Date()
-    console.log(`Month: ${month[d.getMonth()]}`)
-}
-
-function getBatchInfo(batchName,week,day,topicName) {
-    console.log(`${batchName}, ${week}${day}, the topic for today is ${topicName} `)
-}
-
-module.exports.date= printDate;
-module.exports.month = printMonth;
-module.exports.batchInfo = getBatchInfo;
+module.exports.find = findMissingNumber;
+module.exports.find2 = findMissingNumber2;
