@@ -1,0 +1,16 @@
+{
+  "name": "may-2_assignment",
+  "version": "1.0.0",
+  "description": "\"This assignment fully dedicated for 'Populate and Reference'. In this assignment using populate and reference on the example of creating database for books details which has name of collection publisher details, author details and book details.\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "author": "Saurabh Sah",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0"
+  }
+}
