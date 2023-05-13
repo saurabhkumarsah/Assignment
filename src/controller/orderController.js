@@ -1,4 +1,3 @@
-const { CheckIsFreeAppUser } = require('../middlewares/middleware1')
 const orderModel = require('../models/orderModel')
 const productModel = require('../models/productModel')
 const userModel = require('../models/userModel')
@@ -28,11 +27,8 @@ const createOrder = async function (req, res) {
                 }
                 if (flag == true) {
                     const isFreeAppUser = req.headers.isfreeappuser
-                    // console.log(isFreeAppUser === false)
 
                     if (isFreeAppUser === "false") {
-                        // console.log("false")
-                        // res.send("false")
                         const productAmount = await productModel.findById({ _id: productIdFromBody }).select({ _id: 0, price: 1 })
                         req.body.amount = productAmount.price
                         req.body.isFreeAppUser = req.headers.isfreeappuser
@@ -41,17 +37,15 @@ const createOrder = async function (req, res) {
                             const restAmount = userBalance.balance - productAmount.price;
                             await userModel.findOneAndUpdate({ _id: userIdFromBody }, { balance: restAmount })
                             const data = req.body
-                            const saveData = await orderModel.create(data)
+                            const saveData = await (await orderModel.create(data)).populate(['userId', 'productId'])
                             res.send({ Status: true, Data: saveData })
                         } else {
                             res.send("User has not suficient balance.")
                         }
                     } else {
-                        // console.log("true")
-                        // res.send("true")
                         req.body.isFreeAppUser = req.headers.isfreeappuser
                         const data = req.body
-                        const saveData = await orderModel.create(data)
+                        const saveData = await (await orderModel.create(data)).populate(['productId', 'userId'])
                         res.send({ Status: true, Data: saveData })
                     }
 

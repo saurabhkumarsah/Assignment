@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nodemon src/index.js"
   },
-  "author": "Saurabh",
+  "author": "Saurabh Kumar",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",

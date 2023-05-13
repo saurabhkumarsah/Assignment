@@ -8,13 +8,14 @@ const userSchema = new mongoose.Schema({
     address: String,
     age: Number,
     gender: {
-        enum:["male","female","other"]
+        type: String,
+        enum: ["male", "female", "other"]
     },
     isFreeAppUser: {
         type: Boolean,
         default: false
     }
-}, {timestamps: true})
+}, { timestamps: true })
 
 
 module.exports = mongoose.model('User', userSchema)

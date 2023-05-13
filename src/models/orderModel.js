@@ -1,4 +1,4 @@
-const mongoose =  require('mongoose')
+const mongoose = require('mongoose')
 const objectId = mongoose.Schema.Types.ObjectId
 
 const orderModel = new mongoose.Schema({
@@ -20,6 +20,6 @@ const orderModel = new mongoose.Schema({
         default: Date.now()
     }
 
-}, {timestamps: true})
+}, { timestamps: true })
 
 module.exports = mongoose.model('Order', orderModel)

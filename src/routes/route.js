@@ -14,16 +14,7 @@ router.post('/createProduct', productController.createProduct)
 router.post('/createUser', middleware.CheckIsFreeAppUser, userController.createUser)
 
 // API for Create Order
-router.post('/createOrder',middleware.CheckIsFreeAppUser, orderController.createOrder)
-
-
-
-
-// API for Delete documents **only for test purpose**
-router.post('/delete', async function(req,res){
-    await orderModel.deleteMany({})
-    res.send("success")
-})
+router.post('/createOrder', middleware.CheckIsFreeAppUser, orderController.createOrder)
 
 
 module.exports = router

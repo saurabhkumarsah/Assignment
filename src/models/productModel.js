@@ -7,6 +7,6 @@ const productSchema = new mongoose.Schema({
         type: Number,
         require: true
     }
-}, {timestamps: true})
+}, { timestamps: true })
 
 module.exports = mongoose.model('Product', productSchema)
