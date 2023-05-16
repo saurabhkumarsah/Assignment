@@ -8,7 +8,7 @@ const userSchema = ({
     password: String,
     gender: {
         type: String,
-        emun:["male","female","other"]
+        emun: ["male", "female", "other"]
     },
     age: Number,
     isDeleted: {
