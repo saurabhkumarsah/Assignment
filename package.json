@@ -1,0 +1,15 @@
+{
+  "name": "may-12",
+  "version": "1.0.0",
+  "description": "In this assignment I am using try and catch and http status code",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon src/index.js"
+  },
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.1.1"
+  }
+}
