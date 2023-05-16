@@ -40,7 +40,7 @@ const createOrder = async function (req, res) {
                             const saveData = await (await orderModel.create(data)).populate(['userId', 'productId'])
                             res.send({ Status: true, Data: saveData })
                         } else {
-                            res.send("User has not suficient balance.")
+                            res.send({Status: false, Message:"User has not suficient balance."})
                         }
                     } else {
                         req.body.isFreeAppUser = req.headers.isfreeappuser
